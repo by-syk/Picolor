@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--<style name="app_theme" parent="@android:style/Theme.Holo" />-->
+
+    <style name="app_theme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <!--<item name="android:navigationBarColor">@color/color_primary_dark</item>-->
+    </style>
+
+</resources>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_vibrant"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_height"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/card_vertical_margin"
+            android:paddingBottom="@dimen/card_vertical_margin">
+
+            <TextView
+                android:id="@+id/tv_title_vibrant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_vibrant"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_desc_vibrant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_vibrant"
+                android:textSize="14sp"
+                android:layout_below="@id/tv_title_vibrant"
+                android:layout_marginTop="@dimen/card_title_body_padding" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_vibrant_light"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_height"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/card_vertical_margin"
+            android:paddingBottom="@dimen/card_vertical_margin">
+
+            <TextView
+                android:id="@+id/tv_title_vibrant_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_vibrant_light"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_desc_vibrant_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_vibrant_light"
+                android:textSize="14sp"
+                android:layout_below="@id/tv_title_vibrant_light"
+                android:layout_marginTop="@dimen/card_title_body_padding" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_vibrant_dark"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_height"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/card_vertical_margin"
+            android:paddingBottom="@dimen/card_vertical_margin">
+
+            <TextView
+                android:id="@+id/tv_title_vibrant_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_vibrant_dark"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_desc_vibrant_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_vibrant_dark"
+                android:textSize="14sp"
+                android:layout_below="@id/tv_title_vibrant_dark"
+                android:layout_marginTop="@dimen/card_title_body_padding" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_muted"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_height"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/card_vertical_margin"
+            android:paddingBottom="@dimen/card_vertical_margin">
+
+            <TextView
+                android:id="@+id/tv_title_muted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_muted"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_desc_muted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_muted"
+                android:textSize="14sp"
+                android:layout_below="@id/tv_title_muted"
+                android:layout_marginTop="@dimen/card_title_body_padding" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_muted_light"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_height"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/card_vertical_margin"
+            android:paddingBottom="@dimen/card_vertical_margin">
+
+            <TextView
+                android:id="@+id/tv_title_muted_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_muted_light"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_desc_muted_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_muted_light"
+                android:textSize="14sp"
+                android:layout_below="@id/tv_title_muted_light"
+                android:layout_marginTop="@dimen/card_title_body_padding" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_muted_dark"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/card_height"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/card_vertical_margin"
+            android:paddingBottom="@dimen/card_vertical_margin">
+
+            <TextView
+                android:id="@+id/tv_title_muted_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_muted_dark"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_desc_muted_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_muted_dark"
+                android:textSize="14sp"
+                android:layout_below="@id/tv_title_muted_dark"
+                android:layout_marginTop="@dimen/card_title_body_padding" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</merge>

@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.by_syk.picolor"
+        minSdkVersion 21
+        targetSdkVersion 23
+        versionCode 16071800
+        versionName "1.0.0.nightly"
+    }
+
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    /*lintOptions {
+        disable 'MissingTranslation'
+    }*/
+}
+
+repositories {
+    /*flatDir {
+        dirs 'libs'
+    }*/
+    maven {
+        url "https://jitpack.io"
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    //testCompile 'junit:junit:4.12'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:palette-v7:23.4.0'
+    //compile(name:'sp-1.0.1', ext:'aar')
+    //compile(name:'globaltoast-1.0.0', ext:'aar')
+    //compile(name:'dialogrootview-1.0.1', ext:'aar')
+    //compile project(path: ':urianalyser')
+    compile 'com.github.chrisbanes:PhotoView:1.2.6'
+}
