@@ -8,7 +8,7 @@ android {
         applicationId "com.by_syk.picolor"
         minSdkVersion 21
         targetSdkVersion 23
-        versionCode 16071800
+        versionCode 16071801
         versionName "1.0.0.nightly"
     }
 
@@ -26,9 +26,9 @@ android {
 }
 
 repositories {
-    /*flatDir {
+    flatDir {
         dirs 'libs'
-    }*/
+    }
     maven {
         url "https://jitpack.io"
     }
@@ -40,7 +40,7 @@ dependencies {
     compile 'com.android.support:design:23.4.0'
     compile 'com.android.support:palette-v7:23.4.0'
     //compile(name:'sp-1.0.1', ext:'aar')
-    //compile(name:'globaltoast-1.0.0', ext:'aar')
+    compile(name:'globaltoast-1.0.0', ext:'aar')
     //compile(name:'dialogrootview-1.0.1', ext:'aar')
     //compile project(path: ':urianalyser')
     compile 'com.github.chrisbanes:PhotoView:1.2.6'

@@ -13,8 +13,11 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.annotation.NonNull;
 import android.support.design.widget.BottomSheetBehavior;
 import android.support.v7.graphics.Palette;
+import android.text.SpannableString;
+import android.text.method.LinkMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,6 +25,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.by_syk.lib.toast.GlobalToast;
 import com.by_syk.picolor.util.C;
 import com.by_syk.picolor.util.ExtraUtil;
 
@@ -75,6 +79,16 @@ public class MainActivity extends Activity {
         bottomSheetBehavior = BottomSheetBehavior.from(findViewById(R.id.nsv_main));
         bottomSheetBehavior.setPeekHeight(getResources().getDimensionPixelSize(R.dimen.card_height));
         //bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+
+        /*bottomSheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
+            @Override
+            public void onStateChanged(@NonNull View bottomSheet, int newState) {
+                tintNavigationBar(newState == BottomSheetBehavior.STATE_COLLAPSED);
+            }
+
+            @Override
+            public void onSlide(@NonNull View bottomSheet, float slideOffset) {}
+        });*/
     }
 
     private void choosePic(boolean crop) {
@@ -193,6 +207,12 @@ public class MainActivity extends Activity {
 
     private void showPalette() {
         if (palette == null) {
+            findViewById(R.id.rl_vibrant).setBackgroundColor(Color.TRANSPARENT);
+            findViewById(R.id.rl_vibrant_light).setBackgroundColor(Color.TRANSPARENT);
+            findViewById(R.id.rl_vibrant_dark).setBackgroundColor(Color.TRANSPARENT);
+            findViewById(R.id.rl_muted).setBackgroundColor(Color.TRANSPARENT);
+            findViewById(R.id.rl_muted_light).setBackgroundColor(Color.TRANSPARENT);
+            findViewById(R.id.rl_muted_dark).setBackgroundColor(Color.TRANSPARENT);
             return;
         }
 
@@ -263,6 +283,21 @@ public class MainActivity extends Activity {
         }
     }
 
+    /*private void tintNavigationBar(boolean is_tint) {
+        if (palette == null) {
+            return;
+        }
+
+        if (is_tint) {
+            Palette.Swatch swatch = palette.getVibrantSwatch();
+            if (swatch != null) {
+                getWindow().setNavigationBarColor(swatch.getRgb());
+            }
+        } else {
+            getWindow().setNavigationBarColor(Color.BLACK);
+        }
+    }*/
+
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -273,12 +308,18 @@ public class MainActivity extends Activity {
     }
 
     private void aboutDialog() {
+        SpannableString message = ExtraUtil
+                .getLinkableMessage(this, getString(R.string.about_desc));
+
         alertDialog = new AlertDialog.Builder(this)
                 .setTitle(R.string.dia_title_about)
-                .setMessage(R.string.about_desc)
+                .setMessage(message)
                 .setPositiveButton(R.string.dia_bt_dismiss, null)
                 .create();
         alertDialog.show();
+
+        ((TextView) alertDialog.findViewById(android.R.id.message))
+                .setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     @Override

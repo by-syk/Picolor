@@ -11,6 +11,8 @@
     <string name="menu_pic">Choose picture</string>
     <string name="menu_about">About</string>
 
+    <string name="toast_copied">Copied to clipboard: %1$s</string>
+
     <string name="title_vibrant">Vibrant</string>
     <string name="desc_vibrant">A vibrant color from the picture.</string>
     <string name="title_vibrant_dark">Vibrant Dark</string>
@@ -33,6 +35,8 @@
 > Muted
 > Muted Dark
 > Muted Light
+\n> Source code on GitHub:
+[https://github.com/by-syk/Picolor](https://github.com/by-syk/Picolor)
 \nCopyright &#169; 2016 By_syk. All rights reserved."</string>
 
 </resources>
