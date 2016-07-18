@@ -12,6 +12,8 @@ A number of colors with different profiles are extracted from the image:
 * Muted Dark
 * Muted Light
 
+![screenshot.png](screenshot.png)
+
 ### Contact author
 
 * E-mail: [By_syk@163.com](mailto:By_syk@163.com "By_syk")
