@@ -23,6 +23,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.by_syk.lib.toast.GlobalToast;
@@ -326,6 +327,7 @@ public class MainActivity extends Activity {
     public void onBackPressed() {
         if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
             bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+            findViewById(R.id.nsv_main).scrollTo(0, 0);
         } else {
             super.onBackPressed();
         }

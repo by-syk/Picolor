@@ -8,7 +8,7 @@ android {
         applicationId "com.by_syk.picolor"
         minSdkVersion 21
         targetSdkVersion 23
-        versionCode 16071801
+        versionCode 16073000
         versionName "1.0.0.nightly"
     }
 
